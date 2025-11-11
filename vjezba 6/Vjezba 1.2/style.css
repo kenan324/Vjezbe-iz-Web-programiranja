@@ -1,0 +1,32 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    background: lightblue;
+}
+
+h1{
+    text-align: center;
+}
+p{
+    margin: 5px 20px ;
+}
+table{
+    margin-left: 20px;
+}
+
+label{
+    
+    display: flex;
+    gap: 10px;
+    margin: 0 30px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    display: block;
+    margin: 30px auto ;
+    padding: 20px;
+    
+}
+

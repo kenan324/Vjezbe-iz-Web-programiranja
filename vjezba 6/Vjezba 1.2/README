@@ -1,0 +1,16 @@
+# Create a interactive quiz and validate the answers
+
+Add a javascript interactive button for validating the 
+given answers from a user. It will use a object of question and answers and compare the object to the user answers.
+
+### The object 
+
+    const questionsAndAnswers = {
+        q1: ["a"],
+        q2: ["a", "b", "c"],
+        q3: ["b"],
+        q4: ["a", "b", "d"],
+        q5: ["b"]
+    };
+
+And the given result will output: you were given  "points" of total "total" 

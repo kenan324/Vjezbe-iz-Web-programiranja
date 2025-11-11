@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bingo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="convertToPdf.js"></script>
+</head>
+<body>
+    <div class="content" id="contentToConvert">
+        <h1>Bingo Challenge</h1>
+        <p>Pronađi nekoga kao</p>
+        <table>
+            <tr>
+                <td>Putovao je van zemlje</td>
+                <td>Letio je avionom</td>
+                <td>Ima više od troje braćee i sestara</td>
+                <td>Ima pet ili više ključnih ljubimaca</td>
+                <td>Voli jesti kisele krastavce</td>
+            </tr>   
+            <tr>
+                <td>Igra košarku</td>
+                <td>Voli Diesney crtane</td>
+                <td>Voli crtati</td>
+                <td>Voli html</td>
+                <td>Zna roniti</td>
+            </tr>
+            <tr>
+                <td>Omiljena boja je narađansta</td>
+                <td>Nevoli plažu</td>
+                <td>SLOBODAN PROSTOR</td>
+                <td>Dobar je u matematici</td>
+                <td>Nema kučne ljubimce</td>
+            </tr>
+            <tr>
+                <td>Ne voli čokoladu</td>
+                <td>Boji se pauka</td>
+                <td>Voli peći kolaćice</td>
+                <td>Svira instrument</td>
+                <td>Alergičan je na mačke ili pse</td>
+            </tr>
+            <tr>
+                <td>Slavi rođendan u oktobru</td>
+                <td>Voli jesti sir</td>
+                <td>Igra online igrice</td>
+                <td>Nevoli pizzu</td>
+                <td>Voli pjevati</td>
+            </tr>
+        </table>
+        <p>Skupi 5 potpisa zaredom - Bingo</p>
+        <p>Svaka osoba može staviti inicijalne na vaš papir samo dva puta</p>
+        
+
+        <button onclick="generatePDF()">Preuzmi kao PDF</button>
+
+    </div>
+</body>    
+</html>

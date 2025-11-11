@@ -1,0 +1,4 @@
+# How to use javascript to make a PDF-file from a web site
+
+To create a PDF file from a given page, you can use client 
+side lib like html2pdf.js or jsPDF directly.
