@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:#e3d7b4 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    margin-top: 15px;
+    color: #4b382a;
+    text-shadow: 1px 1px 1px rgb(0,0,0,0.2);
+
+}
+
+.navigation{
+    background-color: rgb(255,255,255,0.9);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgb(0,0,0,0.2);
+    display: flex;
+    font-style: none;
+    gap: 10px;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    gap: 10px;
+}
+button{
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2;
+}
+
+button:hover{
+    background: #70472b;
+}
+
+#board{
+    position: relative;
+    width: 90%;
+    flex-grow: 1;
+    background: url("/picture/board.png");
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgb(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.note,.quote,.pinned-img{
+    position: absolute;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: move;
+    user-select: none;
+    box-shadow: 0 4px 10px rgb(0,0,0,0.3);
+    transition: transform 0.1s ease;
+}
+.note{
+    background:linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+                url("/picture/snack.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+   
+}
+/*
+.note.color1 {  }
+.note.color2 {  }
+.note.color3 {  }
+.note.color4 {  }
+.note.color5 {  }
+.note.color6 {  }
+*/
+
+.note[contemptible="true"]{
+    outline: none;
+    min-width: 100px;
+    min-height: 60px;
+    font-size: 14px;
+}
+
+.quote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #4b382a;
+    background: #fff5e6;
+    font-style: italic;
+    text-align: center;
+    width: 200px;
+}
+
+.pinned-img img{
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer{
+    font-size:  13px;
+    color: #5b4636;
+    margin: 10px;
+}
+
+.delete-btn{
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    background: none;
+    border: none;
+    color: #b30000;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.2 ease, color 0.2s ease,
+    tranform 0.1 ease;
+    text-shadow: 1px 1px 2px rgb(255,255,255,0.6);
+
+}
+
+.note:hover .delete-btn,
+.pinned-img:hover .delete-btn,
+.quote:hover .delete-btn{
+    opacity: 1;
+}
+
+.pinned-img .delete-btn:hover{
+    color: #ff0000;
+    transform: scale(1.15);
+    background: transparent !important;
+}
+
+.note .delete-btn:hover{
+    color: #ff0000;
+    transform: scale(1.15);
+    background: transparent !important;
+}
+
+.quote .delete-btn:hover{
+    color: #ff0000;
+    transform: scale(1.15);
+    background: transparent !important;
+}
+
+.note a{
+    background: transparent !important;
+    outline: none;
+}
+
+.quote a{
+    background: transparent !important;
+    outline: none;
+}
+
+.quote:focus{
+    outline: none;
+}
+
+.quote .delete-btn:focus{
+    outline: none;
+}
+
+.note .delete-btn:focus{
+    outline: none;
+}
+
+.pinned-img{
+    box-shadow: 0 0px 0px rgb(0,0,0,0.3);
+}
