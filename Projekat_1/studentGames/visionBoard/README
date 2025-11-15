@@ -1,2 +1,9 @@
-#Creating a Vision Board using HTML CSS and JavaScript
+# Creating a Vision Board using HTML CSS and JavaScript
 
+It is necessary to create a simple website for an 
+interactive whiteboard, that allows users to draw on 
+the screen, change colors, erase, clean, and save 
+drawings as images and the option to save as a PDF.
+
+
+This lab assignment will test manipulation of DOM, handling events, presentation of state, content design user interface. This project will implement important concepts of front-end programming including: API for drawing, handling of events and responsive design web page.
