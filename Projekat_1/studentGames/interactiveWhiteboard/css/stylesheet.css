@@ -1,0 +1,71 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    background-color: #C0C0C0;
+}
+
+h1{
+    color: #ffffff;
+    background-color: rgb(4, 4, 79);
+    margin: 0 0 30px 0;
+    text-shadow: 1px 1px 2px rgba(255, 253, 253, 0.3);
+    padding-left: 5px;
+    width: 100%;
+
+}
+
+.toolbar{
+    background: #808080;
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+   
+}
+
+.toolbar label{
+    margin: 0 5px 0 0;
+    padding-top: 2.5px;
+}
+
+button{
+    background: #808080;
+    border: 0px;
+    padding: 0px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color font-size 0.2s;
+}
+
+button:hover{
+    color: #646464;
+    font-size: 15px;
+}
+
+canvas{
+    background: url("/Projekat_1/studentGames/interactiveWhiteboard/picture/checkerboard.jpg");
+    cursor: url("/Projekat_1/studentGames/interactiveWhiteboard/picture/marker.png")
+            0 20, auto;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+    width: 900px;
+    height: 500px;
+    min-width: 550px;
+    min-height: 200px;
+    touch-action: none;
+}
+
+footer{
+    margin: 0 20px 0 0;
+    font-size: 12px;
+}
+
