@@ -1,0 +1,27 @@
+# Creating a Vision Board using HTML CSS and JavaScript
+
+It is necessary to create a simple website for an 
+interactive whiteboard, that allows users to draw on 
+the screen, change colors, erase, clean, and save 
+drawings as images and the option to save as a PDF.
+
+
+This lab assignment will test manipulation of DOM, handling events, presentation of state, content design user interface. This project will implement important concepts of front-end programming including: API for drawing, handling of events and responsive design web page.
+
+
+## HTML Framework
+
+We will start adding basic layout of the page. We will add a title of the project our main div container and the footer.
+The container will have a div toolbar at the top and the bottom, another container called sidebar-board. The toolbar will have buttons and inputs for basic operations for the whiteboard, like Clear, Save, Erasing, Brush Size and Color Palate. And for the container called sidebar-board
+it will contain a side bar to the both sides of the container and a board canvas.
+
+## Adding JS logic
+
+Here will add an interactive behavior like drawing, erasing, cleaning, and saving.
+
+Canvas API allows for freehand drawing using lineTo() and stroke(). Events mouse and
+touch captures the users interaction with the board. We will add an option that allows us to switch between drawing and erase models. The drawing can bw saved using tiDataURL() method to save a png.
+
+## Adding CSS
+
+We will make the page visually appealing and responsive using CSS. The page will be centered with Flexbox and the panel is responsive and prevents occasional scrolling.
