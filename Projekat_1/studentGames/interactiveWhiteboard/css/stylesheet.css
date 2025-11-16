@@ -21,22 +21,56 @@ h1{
 
 }
 
-.toolbar{
+.toolbar, .sidebar{
     background: #808080;
     padding: 10px 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    justify-content: center;
     gap: 10px;
-   
+
 }
+
+.toolbar{
+    box-shadow:4px 4px rgba(0,0,0,1);
+    border:3px rgb(255, 255, 255);
+    border-style:solid;
+    border-bottom: 2px;
+    border-right:0px;
+    z-index: 1;
+    position: relative;
+}
+
+.sidebar{
+    box-shadow: 4px 4px rgba(0,0,0,1);
+    border-left:solid 3px white;
+    z-index: 1;
+}
+.sidebar:last-child{
+    border: none;
+}
+
+.toolbar:last-child{
+    padding-left: 29px;
+    border-top: 2px;
+    box-shadow: 4px 4px rgba(0,0,0,1);
+    z-index: 2;
+    position: relative;
+}
+
 
 .toolbar label{
     margin: 0 5px 0 0;
     padding-top: 2.5px;
 }
+
+
+.sidebar-board{
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
 
 button{
     background: #808080;
@@ -44,28 +78,29 @@ button{
     padding: 0px 12px;
     font-size: 14px;
     cursor: pointer;
-    transition: color font-size 0.2s;
+    transition: all 0.2s;
 }
 
 button:hover{
     color: #646464;
-    font-size: 15px;
+    transform: scale(1.07); 
 }
 
 canvas{
     background: url("/Projekat_1/studentGames/interactiveWhiteboard/picture/checkerboard.jpg");
     cursor: url("/Projekat_1/studentGames/interactiveWhiteboard/picture/marker.png")
             0 20, auto;
-    box-shadow: 1px 1px rgba(255, 255, 255, 0.2);
     width: 900px;
     height: 500px;
     min-width: 550px;
     min-height: 200px;
     touch-action: none;
+    z-index: 10;
+    border: 4px inset black;
 }
 
 footer{
-    margin: 0 20px 0 0;
+    margin: 20px 0 0 0;
     font-size: 12px;
 }
 
