@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban board</title>
+</head>
+<body>
+    <h1>Kanban Board</h1>
+    <div class="button">
+        <button id="addTaskBtn">Add Task</button>
+        <button id="saveBoardBtn">Save</button>
+        <button id="clearBoardBtn">Clear</button>
+    </div>
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3>Add Task</h3>
+            <input type="text" id="taskInput" placeholder="Your task">
+            <div class="modal-button">
+                <button id="modalAdd">Add</button>
+                <button id="modalCancel">Cancel</button>
+            </div>
+        </div>
+    </div>        
+    <div class="clearModal" class="modal">
+        <div class="modal-content">
+            <h3>Clear whole board</h3>
+            <p>This action cannot be undone</p>
+            <div class="modal-button">
+                <button id="clearYes" style="background: #e74c3c;">Clear</button>
+                <button id="clearNo">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="board">
+        <div class="column" data-status="todo">
+            <h2>To Do</h2>
+            <div class="taskList"></div>
+        </div>
+        <div class="column" data-status="progress">
+            <h2>In progress</h2>
+            <div class="taskList"></div>
+        </div>
+        <div class="column" data-status="done">
+            <h2>Done</h2>
+            <div class="taskList"></div>
+        </div>  
+    </div>
+    <footer>
+        <p>Web programiranje 2025 &copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+    </footer>
+</body>
+</html>
