@@ -135,6 +135,6 @@ button:hover{
  background: #e74c3c;
 }
 
-#clearModal .modal-buttons button:firstchild:hover {
+#clearModal .modal-buttons button:first-child:hover {
  background: #c0392b;
 }
