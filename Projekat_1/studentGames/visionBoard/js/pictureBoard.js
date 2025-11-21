@@ -4,9 +4,19 @@ const andImage = document.getElementById("addImage");
 const addQuotes = document.getElementById("addQuote");
 const save = document.getElementById("addSafe");
 const clear= document.getElementById("clear");
-
-
-
+const saveAa = document.getElementById("addSaveAs");
+//=============SaveModal==============
+const saveModal = document.getElementById("saveModal");
+const cancelBtn = document.getElementById("modalSafeCancel");
+//===========dropdown Menu============
+const dropdownMenuBtn = document.getElementById("dropdownMenuBtn");
+//========== Save content =============
+const saveToPdf = document.getElementById("SaveToPdf");
+const saveToJpeg = document.getElementById("SaveToJpeg");
+//=========== Gmail modal =============
+const gmailModal = document.getElementById("gmailModal");
+const saveToGmail = document.getElementById("SaveToGmail");
+const modalSend = document.getElementById("modalSend");
 // Odaberi glavni element
 
 
@@ -92,6 +102,90 @@ andImage.addEventListener("click", () => {
   makeDraggable(div);
   board.appendChild(div);
 });
+
+//============ SaveModal =============
+addSaveAs.addEventListener("click", () => {
+    saveModal.style.display = "block";
+});
+
+cancelBtn.addEventListener("click", () =>{
+    saveModal.style.display = "none";
+});
+
+//========== dropdown Menu ===========
+
+dropdownMenuBtn.addEventListener("click", () => {
+    saveMenu.style.display = 
+        (saveMenu.style.display === "block") ? "none" : "block";
+});
+ 
+saveModal.addEventListener("click", e => {
+    if (!saveMenu.contains(e.target) && e.target !== dropdownMenuBtn) {            
+        saveMenu.style.display = "none";
+    }
+});
+
+// close modal outside the modalbox
+window.addEventListener("click", e => {
+    if (e.target.classList.contains("modal")) {
+         e.target.style.display = "none";
+    }
+});
+
+//========== Save content =============
+saveToPdf.addEventListener("click", () => {
+    saveModal.style.display = "none";
+    saveMenu.style.display = "none";
+    
+    const element = document.getElementById('content');
+    const options = {
+    margin: 1,
+    filename: 'pictureBoard.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(options).from(element).save();
+});
+
+saveToJpeg.addEventListener("click", () => {
+    saveModal.style.display = "none";
+    saveMenu.style.display = "none";
+
+    html2canvas(document.body).then(canvas => {
+    const link = document.createElement("a");
+    link.download = "pictureBoard.png";
+    link.href = canvas.toDataURL();
+    link.click();
+    });
+});
+
+//=========== Gmail modal =============
+saveToGmail.addEventListener("click", () => {
+    saveModal.style.display = "none";
+    gmailModal.style.display = "block";
+});
+
+gmailCancel = document.getElementById("gmailCancelBtn");
+gmailCancel.addEventListener("click", () => {
+    gmailModal.style.display = "none";
+});
+
+
+modalSend.addEventListener("click", () => {
+    //Gmail input 
+    const gmailInput = document.getElementById("Gmail");
+    gmailInput.value.trim();//remove spaces
+ 
+    const regex = new RegExp("^[a-zA-Z0-9._/-]{3,20}@gmail\.com$");//Basic regex    
+
+    if (regex.test(gmailInput.value)){
+      window.location.href = `mailto:${gmailInput.value}?`;
+    };
+    gmailInput.value = '';
+});
+
+
 
 // ======= Dodaj citat =======
 addQuotes.addEventListener("click", () => {

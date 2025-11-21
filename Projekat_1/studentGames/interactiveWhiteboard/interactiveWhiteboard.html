@@ -7,28 +7,57 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <h1>Interactive Whiteboard</h1>
-    <div class="container">
-            <div class="toolbar">
-                <button id="eraserBtn">Erase</button>
-                <button id="clearBtn">Clear</button>
-                <button id="saveBtn">Save</button>
-            </div>
-            <div class="sidebar-board">
-                <div class="sidebar"></div>
-                <canvas id="board" width="900" height="500"></canvas>
-                <div class="sidebar"></div>
-            </div>
-            <div class="toolbar" id="bottomBar">
-                <input type="color" id="colorPicker" value="#000000">
-                <label for="colorPicker">Color</label>
-                <input type="range" id="sizeBrush" min="1" max="20" value="3">
-                <label for="sizeBrush">Brush</label>
-            </div>
+    <div id="content">
+        <h1>Interactive Whiteboard</h1>
+        <div class="container">
+                <div class="toolbar">
+                    <button id="eraserBtn">Erase</button>
+                    <button id="clearBtn">Clear</button>
+                    <button id="saveBtn">Save</button>
+                </div>
+                <div id="saveModal" class="modal">
+                <div class="modal-content">
+                    <h3>Do you want to save content as...</h3>
+                    <div class="modal-button">
+                        <div class="dropdown">
+                            <button id="dropdownMenuBtn" class="modalBtn">Save as</button>
+                            <div id="saveMenu" class="dropdownContent">
+                                <button id="SaveToJpeg" class="dropdownContentBtn">Jpeg</button>
+                                <button id="SaveToPdf" class="dropdownContentBtn">PDF</button>
+                                <button id="SaveToGmail" class="dropdownContentBtn">Gmail</button>
+                            </div>
+                        </div> 
+                        
+                    <button id="modalSafeCancel" class="modalBtn">Cancel</button>     
+                    </div>
+                </div>
+            </div> 
+            <div id="gmailModal" class="modal">
+                <div class="modal-content">
+                    <h3>Enter your Mail</h3>
+                    <input type="gmail" id="Gmail" class="textBox" placeholder="Type here">
+                    <div class="modal-button">
+                        <button id="modalSend" class="modalBtn">Send</button>
+                        <button id="gmailCancelBtn" class="modalBtn">Cancel</button>
+                    </div>
+                </div>
+            </div> 
+                <div class="sidebar-board">
+                    <div class="sidebar"></div>
+                    <canvas id="board" width="900" height="500"></canvas>
+                    <div class="sidebar"></div>
+                </div>
+                <div class="toolbar" id="bottomBar">
+                    <input type="color" id="colorPicker" value="#000000">
+                    <label for="colorPicker">Color</label>
+                    <input type="range" id="sizeBrush" min="1" max="20" value="3">
+                    <label for="sizeBrush">Brush</label>
+                </div>
+        </div>
+        <footer>
+            Web programiranje 2025 &copy Internacionalna poslovno-Informaciona akademija Tuzla
+        </footer>
+        <script src="js/interactiveWhiteboard.js"></script>
     </div>
-    <footer>
-        Web programiranje 2025 &copy Internacionalna poslovno-Informaciona akademija Tuzla
-    </footer>
-    <script src="js/interactiveWhiteboard.js"></script>
 </body>
 </html>

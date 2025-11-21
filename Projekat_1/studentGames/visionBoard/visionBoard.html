@@ -5,25 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vision Board</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-    <h1>Stundent fun zone</h1>
+    <div id="content">
+        <h1>Stundent fun zone</h1>
 
-    <div class="navigation">
-        <ul>
-            <li><button id="addNotes">+ Post it</button></li>
-            <li><button id="addImage">+ Slika</button></li>
-            <li><button id="addQuote">+ Citat</button></li>
-            <li><button id="addSafe">+ Sprema ti</button></li>
-            <li><button id="clear">+ Oćisti</button></li>
-        </ul>
+        <div class="navigation">
+            <ul>
+                <li><button id="addNotes">+ Post it</button></li>
+                <li><button id="addImage">+ Slika</button></li>
+                <li><button id="addQuote">+ Citat</button></li>
+                <li><button id="addSafe">+ Spremi</button></li>
+                <li><button id="addSaveAs">+ Spremi na</button></li>
+                <li><button id="clear">+ Oćisti</button></li>
+            </ul>
+        </div>
+        <div id="saveModal" class="modal">
+            <div class="modal-content">
+                <h3>Do you want to save content as...</h3>
+                <div class="modal-button">
+                    <div class="dropdown">
+                        <button id="dropdownMenuBtn" class="modalBtn">Save as</button>
+                        <div id="saveMenu" class="dropdownContent">
+                            <button id="SaveToJpeg" class="dropdownContentBtn">Jpeg</button>
+                            <button id="SaveToPdf" class="dropdownContentBtn">PDF</button>
+                            <button id="SaveToGmail" class="dropdownContentBtn">Gmail</button>
+                        </div>
+                    </div> 
+                <button id="modalSafeCancel" class="modalBtn">Cancel</button>     
+                </div>
+            </div>
+        </div> 
+        <div id="gmailModal" class="modal">
+            <div class="modal-content">
+                <h3>Enter your Mail</h3>
+                <input type="gmail" id="Gmail" class="textBox" placeholder="Type here">
+                    <div class="modal-button">
+                    <button id="modalSend" class="modalBtn">Send</button>
+                    <button id="gmailCancelBtn" class="modalBtn">Cancel</button>
+                </div>
+            </div>
+        </div> 
+        <div id="board"></div>
+        <script src="js/pictureBoard.js"></script>
+        <footer>
+            <p>Web programiranje 2025 &copy; Internacionalno poslovno-informaciona akademija Tuzla </p>
+        </footer>
     </div>
-
-    <div id="board"></div>
-    <script src="js/pictureBoard.js"></script>
-    <footer>
-        <p>Web programiranje 2025 &copy; Internacionalno poslovno-informaciona akademija Tuzla </p>
-    </footer>
 </body>
 </html>
