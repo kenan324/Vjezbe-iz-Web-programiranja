@@ -12,7 +12,7 @@ body{
 
 button{
     padding: 10px 20px;
-    margin: 5px;
+    margin: 5px 5px 0 5px;
     border: none;
     background: #3498db;
     color: #ffffff;
@@ -63,13 +63,12 @@ button:hover{
 }
 
 
-
 .modal-button{
     margin: 1.8em;
     
 }
 
-.modal-button button{
+.modal-button .modalBtn{
     padding: 12px 20px;
     margin: 0 15px;
     border: none;
@@ -81,6 +80,50 @@ button:hover{
 
 .modal-buttons button:hover {
  background: #217dbb;
+}
+
+.dropdown{
+   position: relative;
+   display: inline;
+}
+
+.dropdownContent{
+    position: absolute;
+    display: none;
+    width: 150px;
+    padding: 10px 0;
+    left: 15px;
+    border-radius: 4px;
+    z-index: 100;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdownContent .dropdownContentBtn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius:0;
+    color: black;
+    background: none;
+    text-align: left;
+    padding: 3px 20px;
+}
+
+#dropdownMenuBtn{
+    background: rgb(4, 160, 4);
+
+}
+
+.dropdown:hover #dropdownMenuBtn{
+     background: rgb(5, 105, 5);
+
+}
+
+.dropdownContent .dropdownContentBtn:hover {
+    background-color: #ddd;
 }
 
 .board{
