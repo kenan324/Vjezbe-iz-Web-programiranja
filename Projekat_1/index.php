@@ -26,11 +26,11 @@
         <p>Odaberite jednu igru!</p>
 	
         <ul>
-            <li><a href="vjezba 6/Vjezba 1.1/bingo.html">Bingo</a></li>
-            <li><a href="/vjezba 6/Vjezba 1.2/KvizVjezba.html">Kviz</a></li>
-            <li><a href="studentGames/interactiveWhiteboard">Whiteboard</a></li>
-            <li><a href="studentGames/miniKanban">Kanban</a></li>
-            <li><a href="studentGames/visionBoard">Vision Board</a></li>
+            <li><a href="../vjezba 6/Vjezba 1.1/bingo.html">Bingo</a></li>
+            <li><a href="../vjezba 6/Vjezba 1.2/KvizVjezba.html">Kviz</a></li>
+            <li><a href="studentGames/interactiveWhiteboard/interactiveWhiteboard.html">Whiteboard</a></li>
+            <li><a href="studentGames/miniKanban/miniKanban.html">Kanban</a></li>
+            <li><a href="studentGames/visionBoard/visionBoard.html">Vision Board</a></li>
         </ul>
         
         </article>

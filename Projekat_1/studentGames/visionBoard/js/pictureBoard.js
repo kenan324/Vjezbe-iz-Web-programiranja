@@ -17,13 +17,13 @@ const saveToJpeg = document.getElementById("SaveToJpeg");
 const gmailModal = document.getElementById("gmailModal");
 const saveToGmail = document.getElementById("SaveToGmail");
 const modalSend = document.getElementById("modalSend");
-// Odaberi glavni element
 
 
-// Boje za ljepljive biljeĹˇke
+
+// Sticky note colors
 const colors = ["color1", "color2", "color3", "color4", "color5", "color6"];
 
-// Primjeri slika i citata
+// Load picture
 const sampleImages = [
   "picture/slika1.png",
   "picture/slika2.png",
@@ -35,27 +35,27 @@ const sampleImages = [
 const sampleQuotes = [
   "A dog is the only thing on earth that loves you more than he loves himself.Josh Billings",
   "Once you have had a wonderful dog, a life without one is a life diminished.Dean Koontz",
-  "What a dog doing???. unown",
+  "What a dog doing???. unknown",
   "The world would be a nicer place if everyone had the ability to love as unconditionally as a dog. Clinton"
 ];
 
-// ======= Usluzni program za stvaranje stavki koje se mogu povlaciti i brisati =======
+// ======= Create a draggable and deletable items =======
 function makeDraggable(el) {
   let offsetX, offsetY;
 
-  // Kreiranje delete (X) button
+  // Create delete (X) button
   const delBtn = document.createElement("button");
   delBtn.textContent = "X";
   delBtn.className = "delete-btn";
   el.appendChild(delBtn);
 
-  // Brisanje elementa na click
+  // Clear element on click
   delBtn.addEventListener("click", (e) => {
     e.stopPropagation(); // prevent starting drag
     el.remove();
   });
 
-  // logika povlacenja
+  // drag & drop content
   el.addEventListener("mousedown", dragStart);
 
   function dragStart(e) {
@@ -78,7 +78,7 @@ function makeDraggable(el) {
   }
 }
 
-// ======= Dodaj Post It =======
+// ======= Ad Post It =======
 addNote.addEventListener("click", () => {
   const note = document.createElement("div");
   note.className = "note " + colors[Math.floor(Math.random() * colors.length)];
@@ -90,7 +90,7 @@ addNote.addEventListener("click", () => {
   board.appendChild(note);
 });
 
-// ======= Dodatj sliku =======
+// ======= Add Picture  =======
 andImage.addEventListener("click", () => {
   const div = document.createElement("div");
   div.className = "pinned-img";
@@ -132,7 +132,7 @@ window.addEventListener("click", e => {
     }
 });
 
-//========== Save content =============
+//========== SaveAs content =============
 saveToPdf.addEventListener("click", () => {
     saveModal.style.display = "none";
     saveMenu.style.display = "none";
@@ -187,7 +187,7 @@ modalSend.addEventListener("click", () => {
 
 
 
-// ======= Dodaj citat =======
+// ======= add text =======
 addQuotes.addEventListener("click", () => {
   const q = document.createElement("div");
   q.className = "quote";
@@ -199,7 +199,7 @@ addQuotes.addEventListener("click", () => {
   board.appendChild(q);
 });
 
-// ======= Snimi Visual Board =======
+// ======= save Visual Board =======
 save.addEventListener("click", saveBoard);
 function saveBoard() {
   const items = [];
@@ -222,7 +222,7 @@ function saveBoard() {
   alert("Board saved!");
 }
 
-// ======= Ucitaj Visual Board =======
+// ======= save in browser Visual Board =======
 function loadBoard() {
   const data = localStorage.getItem("visionBoardItems");
   if (!data) return;
@@ -240,7 +240,7 @@ function loadBoard() {
 }
 loadBoard();
 
-// ======= Ocisti Visual Board =======
+// ======= Clear Visual Board =======
 clear.addEventListener("click", () => {
   if (confirm("Clear the board?")) {
     board.innerHTML = "";
